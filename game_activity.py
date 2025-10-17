@@ -9,7 +9,7 @@ pygame.init()
 
 pygame.display.set_caption("Fake_Fighers")
 
-WIDTH, HEIGHT= 1280, 720
+WIDTH, HEIGHT= 1920, 1080
 FPS = 60
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 frame_index = 0
@@ -31,7 +31,7 @@ class Animation():
         self.frame_timer = 0
         self.sprites = []
         
-        folder_path = os.path.join("assets", "Knight", "Crash", folder)
+        folder_path = os.path.join("assets", "Knight", "Hitto", folder)
         sprites_name = os.listdir(folder_path)
 
         for name in sprites_name:
@@ -49,7 +49,7 @@ class Animation():
 
     def draw(self, window):
         sprite = self.sprites[self.frame_index]
-        sprite = pygame.transform.scale(sprite, (sprite.get_width() * 3, sprite.get_height() * 3))
+        sprite = pygame.transform.scale(sprite, (sprite.get_width() , sprite.get_height() ))
         window.blit(sprite, (self.x, self.y))
 
 
@@ -63,7 +63,7 @@ def get_background(window, background):
 def main(window):
     clock = pygame.time.Clock()
 
-    anim = Animation(600, 530, "Run", 90)
+    anim = Animation(600, 530, "Idle", 80)
 
     run = True
     while run:
