@@ -23,6 +23,8 @@ class  Player(pygame.sprite.Sprite):
         self.rect = first_sprite.get_rect()
         self.rect.x = x
         self.rect.y = y
+        self.hp  = 100
+        self.max_hp = 100
 
     def handle_input():
     
@@ -34,15 +36,9 @@ class  Player(pygame.sprite.Sprite):
 
 
     def guard()
-    
-
-    def damage()
         
     
-    def hp()
-        
-    
-    def get_hitbox()
+    def take_damage()
     
 
     def gravity()
