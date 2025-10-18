@@ -18,11 +18,12 @@ frame_delay = 100
 
 background  = pygame.image.load(join("assets", "Background", "Background.png"))
 
+
+
 class  Player(pygame.sprite.Sprite):
     GRAVITY = 1
-    ANIMATION_DELAY = 3
 
-    def __init__(self, x, y):
+    def __init__(self, x, y, name):
         super().__init__()
         self.x = x
         self.y = y
@@ -63,18 +64,23 @@ class  Player(pygame.sprite.Sprite):
 
     def update_state(self)
 
+
+
+
 class Animation():
 
-    def __init__(self, x, y, folder, delay):
+    def __init__(self, x, y, character_name, action, delay, scale = 3):
         self.x = x
         self.y = y
-        self.folder = folder
+        self.action = action
         self.delay = delay
+        self.character_name = character_name
+        self.scale = scale
         self.frame_index = 0
         self.frame_timer = 0
         self.sprites = []
         
-        folder_path = os.path.join("assets", "Knight", "Hitto", folder)
+        folder_path = os.path.join("assets", "Characters", self.character_name, self.action)
         sprites_name = os.listdir(folder_path)
 
         for name in sprites_name:
