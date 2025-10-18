@@ -32,6 +32,9 @@ class  Player(pygame.sprite.Sprite):
         self.max_hp = 100
 
     def handle_input(self, keys):
+        self.x  = 0 
+
+        if keys
     
 
     def attack(self)
