@@ -1,14 +1,15 @@
 import pygame
 import button
 
+
 pygame.init()
 
 #create window
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 1080
 
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Main Menu")
 
 #font
@@ -28,12 +29,13 @@ run = True
 
 while run:
 
-    screen.fill((52, 78, 91))
+    window.fill((52, 78, 91))
 
-    if start_button.draw(screen):
-        print("Start")
-    if exit_button.draw(screen):
+    if start_button.draw(window):
+        print("start")
+    if exit_button.draw(window):
         run = False
+
 
     #event handler
     for event in pygame.event.get():

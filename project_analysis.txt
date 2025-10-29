@@ -1,0 +1,328 @@
+================================================================================
+ANALISI STRUTTURA PROGETTO FAKE_FIGHTERS
+================================================================================
+
+FILE PYTHON TROVATI:
+--------------------------------------------------------------------------------
+  • .\button.py
+  • .\config.py
+  • .\game.py
+  • .\game_2.py
+  • .\game_activity.py
+  • .\menu.py
+  • .\offset_air.py
+  • .\organize_mugen_sprites.py
+  • .\player.py
+  • .\rename_Yamcha_folders.py
+
+BACKGROUNDS:
+--------------------------------------------------------------------------------
+  • Background.png
+
+PERSONAGGI E ANIMAZIONI:
+================================================================================
+
+CRASH
+   Total Sprites: 17
+   Total Animations: 2
+--------------------------------------------------------------------------------
+
+  [Movement]
+    • Idle                                (9 frames)
+    • WalkForward                         (8 frames)
+
+HITTO
+   Total Sprites: 1385
+   Total Animations: 30
+--------------------------------------------------------------------------------
+
+  [Movement]
+    • Crouch                              (15 frames)
+    • CrouchDown                          (2 frames)
+    • CrouchUp                            (2 frames)
+    • Idle                                (13 frames)
+    • RunBackward                         (4 frames)
+    • RunForward                          (3 frames)
+    • WalkBackward                        (11 frames)
+    • WalkForward                         (11 frames)
+
+  [Jump]
+    • AirAttack1                          (9 frames)
+    • AirAttack2                          (9 frames)
+    • AirAttack3                          (5 frames)
+    • AirAttack4                          (10 frames)
+    • AirAttackC                          (5 frames)
+    • JumpBackward                        (3 frames)
+    • JumpFall                            (2 frames)
+    • JumpForward                         (3 frames)
+    • JumpLand                            (3 frames)
+    • JumpStart                           (1 frames)
+    • JumpUp                              (3 frames)
+
+  [Attack]
+    • Attack1                             (4 frames)
+    • Attack2                             (5 frames)
+    • Attack3                             (12 frames)
+    • AttackB1                            (11 frames)
+    • AttackB2                            (16 frames)
+    • AttackB3                            (15 frames)
+    • AttackC                             (6 frames)
+
+  [Status]
+    • Guard                               (1 frames)
+    • GuardStart                          (1 frames)
+
+  [Other]
+    • Turn                                (2 frames)
+    • all_animation                       (1198 frames)
+
+KNIGHT
+   Total Sprites: 0
+   Total Animations: 0
+--------------------------------------------------------------------------------
+
+KOBOLT
+   Total Sprites: 0
+   Total Animations: 0
+--------------------------------------------------------------------------------
+
+YAMCHA
+   Total Sprites: 1328
+   Total Animations: 141
+--------------------------------------------------------------------------------
+
+  [Movement]
+    • Crouch                              (10 frames)
+    • CrouchAttackHeavy                   (10 frames)
+    • CrouchDown                          (2 frames)
+    • CrouchKick                          (18 frames)
+    • CrouchKick2                         (11 frames)
+    • CrouchPunch                         (6 frames)
+    • CrouchTurn                          (1 frames)
+    • CrouchUp                            (2 frames)
+    • DashBack                            (3 frames)
+    • DashForward                         (3 frames)
+    • DashUp                              (3 frames)
+    • GuardCrouch                         (1 frames)
+    • GuardEndCrouch                      (1 frames)
+    • GuardHitCrouch                      (1 frames)
+    • GuardStartCrouch                    (1 frames)
+    • HitCrouchHeavy                      (1 frames)
+    • HitCrouchLight                      (1 frames)
+    • HitCrouchMedium                     (1 frames)
+    • Idle                                (16 frames)
+    • RunBackward                         (2 frames)
+    • RunForward                          (3 frames)
+    • SuperDash                           (5 frames)
+    • WalkBackward                        (6 frames)
+    • WalkForward                         (7 frames)
+
+  [Jump]
+    • AirDownBounce                       (2 frames)
+    • AirDownFall                         (1 frames)
+    • AirFallDown                         (1 frames)
+    • AirFallRotate                       (1 frames)
+    • AirFallSpin                         (1 frames)
+    • AirFallUp                           (1 frames)
+    • AttackAirA                          (3 frames)
+    • AttackAirC                          (4 frames)
+    • GuardAir                            (1 frames)
+    • GuardEndAir                         (1 frames)
+    • GuardHitAir                         (1 frames)
+    • GuardStartAir                       (1 frames)
+    • HitAirHeavy                         (1 frames)
+    • HitAirLight                         (1 frames)
+    • HitAirMedium                        (1 frames)
+    • JumpBackward                        (1 frames)
+    • JumpFall                            (5 frames)
+    • JumpFallBackward                    (5 frames)
+    • JumpFallForward                     (4 frames)
+    • JumpForward                         (1 frames)
+    • JumpLand                            (3 frames)
+    • JumpStart                           (1 frames)
+    • JumpUp                              (1 frames)
+    • KiBlastAir                          (5 frames)
+
+  [Attack]
+    • Attack1                             (8 frames)
+    • Attack2                             (4 frames)
+    • Attack3                             (8 frames)
+    • Attack4                             (11 frames)
+    • Attack5                             (8 frames)
+    • AttackB1                            (10 frames)
+    • AttackB2                            (7 frames)
+    • AttackB3                            (3 frames)
+    • AttackB4                            (8 frames)
+    • AttackB5                            (2 frames)
+    • AttackC                             (5 frames)
+    • GuardHit                            (1 frames)
+    • HitBack                             (1 frames)
+    • HitBackLight                        (1 frames)
+    • HitBackMedium                       (1 frames)
+    • HitBounce                           (2 frames)
+    • HitCeilingBounce                    (1 frames)
+    • HitComboLong                        (12 frames)
+    • HitFlyUp                            (2 frames)
+    • HitGetUp                            (1 frames)
+    • HitGetUpSlow                        (8 frames)
+    • HitGroundBounce                     (1 frames)
+    • HitHeavy                            (1 frames)
+    • HitHighHeavy                        (1 frames)
+    • HitHighLight                        (1 frames)
+    • HitHighMedium                       (1 frames)
+    • HitLieDown                          (1 frames)
+    • HitLieDownHit                       (1 frames)
+    • HitLowLight                         (1 frames)
+    • HitLowMedium                        (1 frames)
+    • HitLowMedium2                       (1 frames)
+    • HitMedium                           (1 frames)
+    • HitSpark                            (3 frames)
+    • HitStayDown                         (1 frames)
+    • HitSuper                            (1 frames)
+    • HitTrip                             (1 frames)
+    • HitTrip2                            (1 frames)
+    • HitWallBounce                       (1 frames)
+    • WolfFangHit1                        (3 frames)
+    • WolfFangHit2                        (0 frames)
+
+  [Special]
+    • Kamehameha                          (7 frames)
+    • KamehamehaBeam                      (1 frames)
+    • KamehamehaEnd                       (1 frames)
+    • KiCharge1                           (3 frames)
+    • KiCharge2                           (6 frames)
+    • KiEffect                            (2 frames)
+    • SpecialEffect1                      (1 frames)
+    • SuperBeamCharge                     (9 frames)
+    • SuperBeamFire                       (4 frames)
+    • SuperEffect1                        (4 frames)
+    • SuperEffect2                        (3 frames)
+    • SuperEffect3                        (3 frames)
+    • SuperEmpty                          (0 frames)
+    • SuperEnd1                           (11 frames)
+    • SuperExplosion                      (10 frames)
+    • SuperFinisher                       (30 frames)
+    • SuperFlash1                         (5 frames)
+    • SuperFlash2                         (15 frames)
+    • SuperImpact                         (5 frames)
+    • SuperKamehamehaFull                 (46 frames)
+    • SuperPrep1                          (5 frames)
+    • SuperPrep2                          (5 frames)
+    • SuperRecovery                       (8 frames)
+    • SuperRush                           (15 frames)
+    • SuperSokidanFull                    (50 frames)
+    • SuperTransition                     (4 frames)
+    • SuperWolfFangFull                   (43 frames)
+    • WolfFang                            (1 frames)
+
+  [Status]
+    • Guard                               (1 frames)
+    • GuardCrush                          (2 frames)
+    • GuardEnd                            (1 frames)
+    • GuardStart                          (1 frames)
+    • Intro                               (18 frames)
+    • IntroAlt                            (5 frames)
+    • IntroEffect                         (1 frames)
+    • IntroEffect2                        (4 frames)
+    • Lose                                (1 frames)
+    • Taunt                               (7 frames)
+    • Win                                 (5 frames)
+
+  [Other]
+    • Action_0224                         (23 frames)
+    • Action_0310                         (4 frames)
+    • Action_0321                         (23 frames)
+    • Action_0323                         (38 frames)
+    • Action_0332                         (27 frames)
+    • BigSpark                            (8 frames)
+    • Dizzy                               (6 frames)
+    • Empty                               (0 frames)
+    • PowerCharge                         (2 frames)
+    • PowerUp                             (3 frames)
+    • PowerUpLong                         (11 frames)
+    • TransformStart                      (6 frames)
+    • Turn                                (1 frames)
+    • all_animation                       (545 frames)
+
+================================================================================
+STATISTICHE TOTALI:
+--------------------------------------------------------------------------------
+  • Personaggi: 5
+  • Cartelle totali: 173
+  • File totali: 2731
+  • File Python: 10
+================================================================================
+
+
+CONTROLLO ANIMAZIONI ESSENZIALI:
+================================================================================
+
+Crash:
+  [Movement]
+    OK     Idle
+    OK     WalkForward
+    MANCA  WalkBackward
+  [Jump]
+    MANCA  JumpUp
+    MANCA  JumpFall
+    MANCA  JumpLand
+  [Combat]
+    MANCA  Hurt
+    MANCA  Guard
+    MANCA  Attack1
+
+Hitto:
+  [Movement]
+    OK     Idle
+    OK     WalkForward
+    OK     WalkBackward
+  [Jump]
+    OK     JumpUp
+    OK     JumpFall
+    OK     JumpLand
+  [Combat]
+    MANCA  Hurt
+    OK     Guard
+    OK     Attack1
+
+knight:
+  [Movement]
+    MANCA  Idle
+    MANCA  WalkForward
+    MANCA  WalkBackward
+  [Jump]
+    MANCA  JumpUp
+    MANCA  JumpFall
+    MANCA  JumpLand
+  [Combat]
+    MANCA  Hurt
+    MANCA  Guard
+    MANCA  Attack1
+
+Kobolt:
+  [Movement]
+    MANCA  Idle
+    MANCA  WalkForward
+    MANCA  WalkBackward
+  [Jump]
+    MANCA  JumpUp
+    MANCA  JumpFall
+    MANCA  JumpLand
+  [Combat]
+    MANCA  Hurt
+    MANCA  Guard
+    MANCA  Attack1
+
+Yamcha:
+  [Movement]
+    OK     Idle
+    OK     WalkForward
+    OK     WalkBackward
+  [Jump]
+    OK     JumpUp
+    OK     JumpFall
+    OK     JumpLand
+  [Combat]
+    MANCA  Hurt
+    OK     Guard
+    OK     Attack1
