@@ -1,0 +1,174 @@
+================================================================================
+ANALISI SPRITE HP BAR
+================================================================================
+
+Cartella analizzata: assets/Items/Hp_bar
+Totale PNG trovati: 142
+
+SPRITE DISPONIBILI:
+--------------------------------------------------------------------------------
+Group 11, Index 0: 11 0 fight.png
+Group 11, Index 1: 11 1 fight.png
+Group 11, Index 2: 11 2 fight.png
+Group 11, Index 3: 11 3 fight.png
+Group 12, Index 0: 12 0 fight.png
+Group 12, Index 1: 12 1 fight.png
+Group 12, Index 2: 12 2 fight.png
+Group 12, Index 3: 12 3 fight.png
+Group 13, Index 0: 13 0 fight.png
+Group 13, Index 1: 13 1 fight.png
+Group 13, Index 2: 13 2 fight.png
+Group 13, Index 3: 13 3 fight.png
+Group 21, Index 1: 21 1 fight.png
+Group 22, Index 1: 22 1 fight.png
+Group 23, Index 0: 23 0 fight.png
+Group 23, Index 1: 23 1 fight.png
+Group 30, Index 0: 30 0 fight.png
+Group 30, Index 1: 30 1 fight.png
+Group 30, Index 2: 30 2 fight.png
+Group 70, Index 1: 70 1 fight.png
+Group 70, Index 2: 70 2 fight.png
+Group 70, Index 3: 70 3 fight.png
+Group 70, Index 4: 70 4 fight.png
+Group 70, Index 5: 70 5 fight.png
+Group 70, Index 6: 70 6 fight.png
+Group 70, Index 7: 70 7 fight.png
+Group 70, Index 8: 70 8 fight.png
+Group 70, Index 9: 70 9 fight.png
+Group 70, Index 10: 70 10 fight.png
+Group 70, Index 11: 70 11 fight.png
+Group 70, Index 12: 70 12 fight.png
+Group 70, Index 13: 70 13 fight.png
+Group 70, Index 14: 70 14 fight.png
+Group 70, Index 15: 70 15 fight.png
+Group 70, Index 16: 70 16 fight.png
+Group 70, Index 17: 70 17 fight.png
+Group 70, Index 18: 70 18 fight.png
+Group 70, Index 19: 70 19 fight.png
+Group 70, Index 20: 70 20 fight.png
+Group 70, Index 21: 70 21 fight.png
+Group 70, Index 22: 70 22 fight.png
+Group 70, Index 23: 70 23 fight.png
+Group 70, Index 24: 70 24 fight.png
+Group 70, Index 25: 70 25 fight.png
+Group 70, Index 26: 70 26 fight.png
+Group 70, Index 27: 70 27 fight.png
+Group 70, Index 28: 70 28 fight.png
+Group 70, Index 29: 70 29 fight.png
+Group 70, Index 30: 70 30 fight.png
+Group 70, Index 31: 70 31 fight.png
+Group 71, Index 1: 71 1 fight.png
+Group 71, Index 2: 71 2 fight.png
+Group 71, Index 3: 71 3 fight.png
+Group 71, Index 4: 71 4 fight.png
+Group 71, Index 5: 71 5 fight.png
+Group 71, Index 6: 71 6 fight.png
+Group 71, Index 7: 71 7 fight.png
+Group 71, Index 8: 71 8 fight.png
+Group 71, Index 9: 71 9 fight.png
+Group 71, Index 10: 71 10 fight.png
+Group 71, Index 11: 71 11 fight.png
+Group 71, Index 12: 71 12 fight.png
+Group 71, Index 13: 71 13 fight.png
+Group 71, Index 14: 71 14 fight.png
+Group 71, Index 15: 71 15 fight.png
+Group 71, Index 16: 71 16 fight.png
+Group 71, Index 17: 71 17 fight.png
+Group 71, Index 18: 71 18 fight.png
+Group 71, Index 19: 71 19 fight.png
+Group 71, Index 20: 71 20 fight.png
+Group 71, Index 21: 71 21 fight.png
+Group 71, Index 22: 71 22 fight.png
+Group 71, Index 23: 71 23 fight.png
+Group 71, Index 24: 71 24 fight.png
+Group 72, Index 1: 72 1 fight.png
+Group 72, Index 2: 72 2 fight.png
+Group 72, Index 3: 72 3 fight.png
+Group 72, Index 4: 72 4 fight.png
+Group 72, Index 5: 72 5 fight.png
+Group 72, Index 6: 72 6 fight.png
+Group 72, Index 7: 72 7 fight.png
+Group 72, Index 8: 72 8 fight.png
+Group 72, Index 9: 72 9 fight.png
+Group 72, Index 10: 72 10 fight.png
+Group 72, Index 11: 72 11 fight.png
+Group 72, Index 12: 72 12 fight.png
+Group 72, Index 13: 72 13 fight.png
+Group 72, Index 14: 72 14 fight.png
+Group 72, Index 15: 72 15 fight.png
+Group 72, Index 16: 72 16 fight.png
+Group 72, Index 17: 72 17 fight.png
+Group 72, Index 18: 72 18 fight.png
+Group 72, Index 19: 72 19 fight.png
+Group 72, Index 20: 72 20 fight.png
+Group 72, Index 21: 72 21 fight.png
+Group 72, Index 22: 72 22 fight.png
+Group 72, Index 23: 72 23 fight.png
+Group 72, Index 24: 72 24 fight.png
+Group 72, Index 25: 72 25 fight.png
+Group 73, Index 1: 73 1 fight.png
+Group 73, Index 2: 73 2 fight.png
+Group 73, Index 3: 73 3 fight.png
+Group 73, Index 4: 73 4 fight.png
+Group 73, Index 5: 73 5 fight.png
+Group 73, Index 6: 73 6 fight.png
+Group 73, Index 7: 73 7 fight.png
+Group 73, Index 8: 73 8 fight.png
+Group 73, Index 9: 73 9 fight.png
+Group 73, Index 10: 73 10 fight.png
+Group 73, Index 11: 73 11 fight.png
+Group 73, Index 12: 73 12 fight.png
+Group 73, Index 13: 73 13 fight.png
+Group 73, Index 14: 73 14 fight.png
+Group 73, Index 15: 73 15 fight.png
+Group 73, Index 16: 73 16 fight.png
+Group 73, Index 17: 73 17 fight.png
+Group 73, Index 18: 73 18 fight.png
+Group 73, Index 19: 73 19 fight.png
+Group 73, Index 20: 73 20 fight.png
+Group 73, Index 21: 73 21 fight.png
+Group 73, Index 22: 73 22 fight.png
+Group 73, Index 23: 73 23 fight.png
+Group 73, Index 24: 73 24 fight.png
+Group 73, Index 25: 73 25 fight.png
+Group 73, Index 26: 73 26 fight.png
+Group 73, Index 27: 73 27 fight.png
+Group 74, Index 1: 74 1 fight.png
+Group 74, Index 2: 74 2 fight.png
+Group 74, Index 3: 74 3 fight.png
+Group 74, Index 4: 74 4 fight.png
+Group 74, Index 5: 74 5 fight.png
+Group 74, Index 6: 74 6 fight.png
+Group 74, Index 7: 74 7 fight.png
+Group 74, Index 8: 74 8 fight.png
+Group 74, Index 9: 74 9 fight.png
+Group 74, Index 10: 74 10 fight.png
+Group 74, Index 11: 74 11 fight.png
+Group 74, Index 12: 74 12 fight.png
+Group 74, Index 13: 74 13 fight.png
+Group 74, Index 14: 74 14 fight.png
+Group 75, Index 1: 75 1 fight.png
+Group 26959, Index 0: 26959 0 fight.png
+
+================================================================================
+SPRITE NECESSARI:
+--------------------------------------------------------------------------------
+[TROVATO] Group 11, Index 0: P1 HP bar vuota
+[TROVATO] Group 11, Index 1: P2 HP bar vuota
+[TROVATO] Group 12, Index 0: P1 HP bar damage (rossa)
+[TROVATO] Group 12, Index 1: P2 HP bar damage (rossa)
+[TROVATO] Group 13, Index 0: P1 HP bar piena (gialla/verde)
+[TROVATO] Group 13, Index 1: P2 HP bar piena (gialla/verde)
+[TROVATO] Group 21, Index 1: P1 Power bar background
+[TROVATO] Group 22, Index 1: P2 Power bar background
+[TROVATO] Group 23, Index 0: P1 Power bar front
+[TROVATO] Group 23, Index 1: P2 Power bar front
+[MANCANTE] Group 24, Index 0: Win icon
+[MANCANTE] Group 50, Index 0: P1 Face frame
+[MANCANTE] Group 51, Index 0: P2 Face frame
+[MANCANTE] Group 52, Index 1: Power bar mid
+[MANCANTE] Group 100, Index 1: Background HP bar (frame)
+
+================================================================================
+Trovati: 10/15
+Mancanti: 5/15
