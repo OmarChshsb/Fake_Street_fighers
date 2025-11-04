@@ -1,0 +1,32 @@
+; ADD004 BASIC PIEs ReBuilded DEF (01/04/2018)
+;==============================================
+; This file is Made by PIE.
+; there is a backup of this file in the same folder, named "<samename>.a4bk".
+; to Restore, use assist tool, or delete this file, then remove ".a4bk" from the neme of backup.
+;==============================================
+
+[Info]
+name = "Hit"
+displayname = "Hit"
+versiondate = 26/3/2020
+mugenversion = 1.0
+author = "DCslayer"
+pal.defaults = 1
+[Files]
+sprite = Hitto(DBFZ).sff
+anim = Hitto(DBFZ).air
+sound = Hitto(DBFZ).snd
+cmd = Hitto(DBFZ).cmd
+cns=Hitto(DBFZ).cns
+stcommon=common1.cns
+st=Hitto(DBFZ).cns
+st1=IA.cns
+st2=S.Skills.cns
+st3=Specials.cns
+st4=Supers.cns
+st5=Misc.cns
+pal1 = 1.act
+pal2 = 2.act
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

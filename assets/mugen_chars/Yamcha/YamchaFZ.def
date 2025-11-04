@@ -1,0 +1,20 @@
+[Info]
+name="YamchaFZ"
+displayname="Yamcha"
+versiondate=
+mugenversion=1.0
+author="Tomo"
+pal.defaults=1
+[Files]
+sprite=Yamcha.sff
+sound=Yamcha.snd
+anim=Yamcha.air
+cmd=Yamcha.cmd
+cns=Yamcha.cns
+st=Yamcha.cns
+st1=AI.cns
+stcommon=common1.cns
+pal1=Yamcha.act
+[Arcade]
+intro.storyboard = intro\intro.def
+ending.storyboard=

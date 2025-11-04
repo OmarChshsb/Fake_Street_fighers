@@ -1,0 +1,40 @@
+a: Light combo
+b: Medium combo
+Down + c: Heavy combo
+c: Time Skip counter. Cannot be used during The
+World.
+Down + a: Tides of Time
+During Tides of Time, Hit cannot be hit and you can press the following button to perform the corresponding attack(each attack requires player 2 to be within a certain range):
+ +a:Direct Hit(low damage, long range)
+ +b:Instant Blow(medium damage, medium range)
+ +c:Guard Breaker(high damage,short range)
+Down + b: Tides of Time EX
+Cost 500 power, has faster cast time than Tides of Time
+During Tides of Time EX, Hit cannot be hit and you can press the following button to perform the corresponding attack(each attack requires player 2 to be within a certain range):
+ +Time Release:a or down + a or up + a will perform Time Release Type A or B or C, each type can only be performed once during a Time Release combo, and all type can be combo in any sequence.
+ +b:Instant Blow EX(attack from behind,medium damage, medium range)
+ +c:Guard Breaker EX(attack from behind,high damage,short range)
+Forward + c: Deadly Intent
+Cost 250 power, During Deadly Intent, Hit cannot be hit and you can press the following button to perform the corresponding move:
+ +a: enter Tides of Time
+ +b: enter Tides of Time EX
+ +c: dash 1 more time, cost no power, up to 2 time.
+Backward + c: Mark of An Assassin
+Cost 250 power, During Mark of An Assassin, Hit cannot be hit and you can press the following button to perform the corresponding move:
+ +a: enter Tides of Time
+ +b: enter Tides of Time EX
+ +c: dash 1 more time, cost no power, up to 2 time.
+a air:air combo 1
+b air: air combo 2
+c air: air counter. Cannot be used during The
+World.
+Special 1: Icy Glare: create ice under Hit's feet then the ice expand, damage player 2 if they step on, you can press b or c to
+allow the ice to expand in different ways. Cannot be used during The
+World.
+Special 2: The World: stop time for a mere moment, if you use other special skills, time will stop until you finish performing that skill. Cannot be used when player 2 is in stage 1 of Time Prison. 
+Special 3: Time Release Barrage: perform time release 5 time, can be used during The world.
+Special 4: Dead Blow: punch a shockwave through time and space, if Hit's power is >= 500, Dead Blow will consume it until Hit's power is <= 500 and increase damage depends on the amount of power consumed. Can be used during The world.
+Special 5: Realized Power: dash forward and hit player 2. Can be used during The world. Can be used in air.
+Special 6: Type 1: Time Prison: teleport in front of player 2 and Hit will counter the next attack and sent player 2 into Time Prison. Cannot be used during The World. 
+ 	   Type 2: The World: Muda Muda Muda: dash forward and perform an attack rush. Can only be used during The World. 
+Super: Cannot be used during The World.

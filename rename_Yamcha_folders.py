@@ -1,187 +1,133 @@
 import os
-from PIL import Image
+import shutil
+import re
 
-def analyze_hp_bar_sprites(folder_path="assets/Items/Hp_bar"):
+def organize_from_all_animation(character_name):
     """
-    Analizza tutti i PNG nella cartella HP bar e mostra info dettagliate.
+    Organizza PNG dalla cartella '_all_animation' in azioni separate.
     """
     
-    print("="*80)
-    print("🔍 ANALISI SPRITE HP BAR")
-    print("="*80)
-    print(f"📁 Cartella: {folder_path}\n")
+    all_anim_folder = f"assets/Characters/{character_name}/all_animation"
+    base_path = f"assets/Characters/{character_name}"
     
-    # Verifica esistenza cartella
-    if not os.path.exists(folder_path):
-        print(f"❌ ERRORE: Cartella non trovata!")
-        print(f"   Percorso cercato: {os.path.abspath(folder_path)}")
-        print("\n💡 SUGGERIMENTO:")
-        print("   Crea la cartella: mkdir -p assets/item/Hp_bar")
-        print("   E metti dentro i PNG estratti da fight.sff")
-        input("\nPremi INVIO per chiudere...")
-        return
+    print(f"\n{'='*80}")
+    print(f"🎨 ORGANIZZAZIONE - {character_name}")
+    print(f"{'='*80}")
+    print(f"📁 Input: {all_anim_folder}\n")
     
-    # Trova tutti i PNG
-    png_files = []
-    for file in os.listdir(folder_path):
-        if file.lower().endswith('.png'):
-            png_files.append(file)
+    # Verifica cartella
+    if not os.path.exists(all_anim_folder):
+        print(f"❌ Cartella non trovata: {all_anim_folder}")
+        return False
+    
+    # Leggi PNG
+    png_files = sorted([f for f in os.listdir(all_anim_folder) if f.lower().endswith('.png')])
     
     if not png_files:
-        print("❌ NESSUN FILE PNG TROVATO!")
-        print(f"\n📂 Contenuto cartella:")
-        for item in os.listdir(folder_path):
-            print(f"   - {item}")
-        input("\nPremi INVIO per chiudere...")
-        return
+        print(f"❌ Nessun PNG trovato!")
+        return False
     
-    # Ordina file
-    png_files.sort()
+    print(f"✅ Trovati {len(png_files)} PNG\n")
     
-    print(f"✅ Trovati {len(png_files)} file PNG\n")
-    print("="*80)
-    print("📊 DETTAGLI SPRITE")
-    print("="*80)
-    print(f"{'#':<4} {'Nome File':<30} {'Dimensioni':<15} {'Group':<8} {'Index':<6}")
-    print("-"*80)
-    
-    # Analizza ogni file
-    sprite_map = {}
-    
-    for i, filename in enumerate(png_files, 1):
-        filepath = os.path.join(folder_path, filename)
+    # Mapping standard MUGEN
+    action_map = {
+        0: "Idle",
+        10: "Stand",
+        20: "Crouch",
+        21: "CrouchEnd",
+        100: "JumpStart",
+        101: "JumpUp",
+        102: "JumpForward",
+        103: "JumpBack",
+        104: "JumpFall",
+        105: "JumpLand",
         
-        try:
-            # Carica immagine per ottenere dimensioni
-            img = Image.open(filepath)
-            width, height = img.size
-            size_str = f"{width}x{height}"
-            
-            # Estrai group e index dal nome file
-            # Formati comuni: "100_1.png", "11-0.png", "group_index.png"
-            import re
-            numbers = re.findall(r'\d+', filename)
-            
-            if len(numbers) >= 2:
-                group = int(numbers[0])
-                index = int(numbers[1])
-                sprite_map[(group, index)] = filename
-                group_str = str(group)
-                index_str = str(index)
-            else:
-                group_str = "?"
-                index_str = "?"
-            
-            print(f"{i:<4} {filename:<30} {size_str:<15} {group_str:<8} {index_str:<6}")
-            
-        except Exception as e:
-            print(f"{i:<4} {filename:<30} {'ERROR':<15} {'?':<8} {'?':<6}")
-            print(f"     ⚠️ Errore: {e}")
-    
-    print("="*80)
-    
-    # Mappa sprite necessari da fight.def
-    print("\n📋 SPRITE NECESSARI (da fight.def)")
-    print("="*80)
-    
-    needed_sprites = {
-        # HP Bar
-        (100, 1): "Background HP bar (frame)",
-        (11, 0): "P1 HP bar vuota",
-        (11, 1): "P2 HP bar vuota",
-        (12, 0): "P1 HP bar damage (rossa)",
-        (12, 1): "P2 HP bar damage (rossa)",
-        (13, 0): "P1 HP bar piena (gialla/verde)",
-        (13, 1): "P2 HP bar piena (gialla/verde)",
+        200: "Attack1",
+        210: "Attack2",
+        220: "Attack3",
+        230: "AttackB1",
+        240: "AttackB2",
+        250: "AttackB3",
+        260: "AttackC",
         
-        # Power Bar
-        (21, 1): "P1 Power bar background",
-        (22, 1): "P2 Power bar background",
-        (23, 0): "P1 Power bar front",
-        (23, 1): "P2 Power bar front",
-        (52, 1): "Power bar mid",
+        300: "SpecialA",
+        310: "SpecialB",
+        320: "SpecialC",
         
-        # Face (opzionali)
-        (50, 0): "P1 Face frame",
-        (51, 0): "P2 Face frame",
-        
-        # WinIcon (opzionali)
-        (24, 0): "Win icon",
+        600: "AirAttack1",
+        610: "AirAttack2",
+        620: "AirAttack3",
+        630: "AirAttack4",
+        640: "AirAttackC",
     }
     
-    print(f"{'Group':<8} {'Index':<8} {'Status':<10} {'Descrizione':<40}")
-    print("-"*80)
+    # Organizza PNG per action ID
+    organized = {}  # {action_id: [(frame_num, filename), ...]}
     
-    found_count = 0
-    missing_count = 0
-    
-    for (group, index), description in sorted(needed_sprites.items()):
-        if (group, index) in sprite_map:
-            status = "✅ Trovato"
-            filename = sprite_map[(group, index)]
-            found_count += 1
+    for png_file in png_files:
+        # Estrai numeri: "123_45.png" → [123, 45]
+        numbers = re.findall(r'\d+', png_file)
+        
+        if len(numbers) >= 2:
+            action_id = int(numbers[0])
+            frame_num = int(numbers[1])
+        elif len(numbers) == 1:
+            action_id = int(numbers[0])
+            frame_num = 0
         else:
-            status = "❌ Mancante"
-            filename = "-"
-            missing_count += 1
+            continue
         
-        print(f"{group:<8} {index:<8} {status:<10} {description:<40}")
-        if status == "✅ Trovato":
-            print(f"         → {filename}")
-    
-    print("="*80)
-    print(f"\n📊 RIEPILOGO:")
-    print(f"   ✅ Sprite trovati: {found_count}/{len(needed_sprites)}")
-    print(f"   ❌ Sprite mancanti: {missing_count}/{len(needed_sprites)}")
-    
-    if missing_count == 0:
-        print("\n🎉 PERFETTO! Hai tutti gli sprite necessari!")
-    else:
-        print(f"\n⚠️  Mancano {missing_count} sprite importanti")
-        print("   Estrai tutti gli sprite da fight.sff usando Fighter Factory")
-    
-    # Genera codice Python per caricare sprite
-    print("\n" + "="*80)
-    print("💻 CODICE PYTHON GENERATO")
-    print("="*80)
-    print("\n# Mappa sprite disponibili:")
-    print("SPRITE_MAP = {")
-    for (group, index), filename in sorted(sprite_map.items()):
-        print(f'    ({group}, {index}): "{filename}",')
-    print("}")
-    
-    print("\n" + "="*80)
-    
-    # Salva report su file
-    report_path = "hp_bar_analysis.txt"
-    with open(report_path, 'w', encoding='utf-8') as f:
-        f.write("="*80 + "\n")
-        f.write("ANALISI SPRITE HP BAR\n")
-        f.write("="*80 + "\n\n")
-        f.write(f"Cartella analizzata: {folder_path}\n")
-        f.write(f"Totale PNG trovati: {len(png_files)}\n\n")
+        if action_id not in organized:
+            organized[action_id] = []
         
-        f.write("SPRITE DISPONIBILI:\n")
-        f.write("-"*80 + "\n")
-        for (group, index), filename in sorted(sprite_map.items()):
-            f.write(f"Group {group}, Index {index}: {filename}\n")
-        
-        f.write("\n" + "="*80 + "\n")
-        f.write("SPRITE NECESSARI:\n")
-        f.write("-"*80 + "\n")
-        for (group, index), description in sorted(needed_sprites.items()):
-            status = "TROVATO" if (group, index) in sprite_map else "MANCANTE"
-            f.write(f"[{status}] Group {group}, Index {index}: {description}\n")
-        
-        f.write("\n" + "="*80 + "\n")
-        f.write(f"Trovati: {found_count}/{len(needed_sprites)}\n")
-        f.write(f"Mancanti: {missing_count}/{len(needed_sprites)}\n")
+        organized[action_id].append((frame_num, png_file))
     
-    print(f"\n📄 Report salvato in: {report_path}")
-    print("="*80)
+    print(f"📊 Trovate {len(organized)} azioni\n")
     
-    input("\nPremi INVIO per chiudere...")
+    # Crea cartelle e sposta PNG
+    created_folders = []
+    
+    for action_id in sorted(organized.keys()):
+        # Nome azione
+        action_name = action_map.get(action_id, f"Action{action_id}")
+        
+        # Crea cartella azione
+        action_folder = os.path.join(base_path, action_name)
+        os.makedirs(action_folder, exist_ok=True)
+        created_folders.append(action_name)
+        
+        # Ordina frame
+        frames = sorted(organized[action_id], key=lambda x: x[0])
+        
+        # Copia PNG
+        for new_frame_idx, (orig_frame_num, png_file) in enumerate(frames):
+            src = os.path.join(all_anim_folder, png_file)
+            dst = os.path.join(action_folder, f"{new_frame_idx}.png")
+            
+            try:
+                shutil.copy2(src, dst)
+                print(f"✅ {action_name}/{new_frame_idx}.png  ({png_file})")
+            except Exception as e:
+                print(f"❌ Errore: {e}")
+    
+    print(f"\n{'='*80}")
+    print(f"✅ FINITO! Organizzate {len(created_folders)} azioni")
+    print(f"{'='*80}\n")
+    
+    for folder in sorted(created_folders):
+        print(f"   📁 {folder}")
+    
+    print()
+    return True
 
 
 if __name__ == "__main__":
-    analyze_hp_bar_sprites()
+    print("\n🎮 ORGANIZZAZIONE NAPPA E FRIEZA\n")
+    
+    # Organizza Nappa
+    organize_from_all_animation("Nappa")
+    
+    # Organizza Frieza
+    organize_from_all_animation("Frieza")
+    
+    print("\n✅ FINITO! Sprite pronti per il gioco! 🎉\n")

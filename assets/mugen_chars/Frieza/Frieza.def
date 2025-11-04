@@ -1,0 +1,24 @@
+[Info]
+name = "Frieza"
+displayname = "Frieza"
+versiondate = 
+mugenversion = 1.1
+author = "Tomo"
+pal.defaults = 1
+
+[Files]
+sprite = Frieza.sff
+anim = Frieza.air
+sound = Frieza.snd
+cmd = Frieza.cmd
+cns = Frieza.cns
+stcommon = common.cns
+st = Frieza.cns
+st1 = IA.cns
+st2 = Specials.cns
+st3 = Hypers.cns
+pal1 = 1.act
+
+[Arcade]
+intro.storyboard = intro\intro.def
+ending.storyboard =
